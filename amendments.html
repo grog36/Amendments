@@ -1,0 +1,56 @@
+<!-- Gregory Ecklund -->
+<!-- September 2022 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amendments of the Constitution Quiz</title>
+    <script src = "./amendments.js" defer></script>
+    <link href = "./amendments.css" rel = "stylesheet">
+</head>
+<body>
+    
+    <!-- START BUTTON -->
+    <div class = "startButton">
+        <button id = "startButton" onclick = "start();">START!</button>
+    </div>
+
+    <!-- GIVE UP BUTTON -->
+    <div class = "giveUp">
+        <button id = "giveUpButton" onclick = "youLose();">Give Up?</button>
+    </div>
+
+
+    <!-- TIMER -->
+    <div class = "timer">
+        <div class = "minutes">
+        <label id = "minutesLabel">Minutes: </label><p id = "minutes">0</p>
+        </div>
+        <div class = "seconds">
+        <label id = "secondsLabel">Seconds: </label><p class = "seconds" id = "seconds">0</p>
+        </div>
+    </div>
+
+    <!-- QUESTIONS -->
+    <p class = "questions" id = "questions">Question</p>
+
+    <br>
+    <br>
+
+    <!-- ANSWER CHOICE BUTTONS -->
+	<div class = "answerButtons">
+		<button id = "answerButton1" class = "answerButton1" onclick = "checkAnswer(1);">Answer1</button><button id = "answerButton2" class = "answerButton2" onclick = "checkAnswer(2);">Answer2</button>
+        <br>
+		<button id = "answerButton3" class = "answerButton3" onclick = "checkAnswer(3);">Answer3</button><button id = "answerButton4" class = "answerButton4" onclick = "checkAnswer(4);">Answer4</button>
+	</div>
+    
+    <!-- RETRY BUTTON -->
+	<div class = "retryButton">
+		<button id = "retryButton" class = "retryButton" onclick = "retry();">Retry?</button>
+	</div>
+
+</body>
+</html>

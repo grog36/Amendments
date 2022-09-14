@@ -1,0 +1,91 @@
+/* Gregory Ecklund */
+/* September 2022 */
+
+/* BODY */
+body {
+    background-color: pink;
+}
+
+/* QUESTIONS */
+.questions {
+    height: fit-content;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    font-size: 34px;
+    visibility: hidden;
+}
+
+/* START BUTTON */
+.startButton {
+    text-align: center;
+    height: fit-content;
+}
+.startButton > button {
+    background-color: springgreen;
+    padding: 14px;
+    font-size: 18px;
+}
+
+/* RETRY BUTTON */
+.retryButton {
+    height: fit-content;
+    visibility: hidden;
+    text-align: center;
+}
+.retryButton > button {
+    background-color: rgba(90, 3, 252, 0.315);
+    margin-top: -80px;
+    font-size: 20px;
+    padding: 14px;
+}
+
+/* ANSWER BUTTONS */
+.answerButtons {
+    height: fit-content;
+    visibility: hidden;
+    text-align: center;
+}
+.answerButtons > button {
+    background-color: orange;
+    font-size: 50px;
+    width: 8rem;
+    height: 8rem;
+    color: darkslategrey;
+}
+
+/* TIMER */
+.minutes {
+    height: fit-content;
+    margin-top: -60px;
+    display: flex;
+    flex: right;
+    visibility: hidden;
+    text-align: right;
+    font-size: large;
+    font-weight: bolder;
+    color: blue;
+}
+.seconds {
+    height: fit-content;
+    display: flex;
+    flex: left;
+    visibility: hidden;
+    text-align: right;
+    font-size: large;
+    font-weight: bolder;
+    color: blue;
+}
+
+/* GIVE UP BUTTON */
+.giveUp {
+    height: fit-content;
+    display: flex;
+    float: right;
+    visibility: hidden;
+}
+#giveUpButton {
+    background-color: aquamarine;
+    padding: 10px;
+    font-size: 20px;
+}
