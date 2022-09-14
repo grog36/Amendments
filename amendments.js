@@ -6,114 +6,33 @@ let answerLocationNumber;
 let score = 0;
 
 const AMENDMENTS = {
-    "1": {
-        "description": "Guarantees the right to the freedoms of speech, press, and religion. Protects the right to petition the government.",
-        "year": 1791
-    },
-    "2": {
-        "description": "Guarantees the people's right to own and bear arms for their defense.",
-        "year": 1791
-    },
-    "3": {
-        "description": "Citizens cannot be forced to quarter soldiers during times of peace.",
-        "year": 1791
-    },
-    "4": {
-        "description": "Citizens cannot be forced to subject themselves to seizure and search without a search warrant and probable cause.",
-        "year": 1791
-    },
-    "5": {
-        "description": "Prohibits abuse of governmental authority in legal procedures. Establishes rules for indictment by eminent domain and grand jury. Guarantees the due process rights. Protects citizens from self-incrimination and double jeopardy.",
-        "year": 1791
-    },
-    "6": {
-        "description": "Guarantees fair and speedy jury trial and the rights to know the accusation, the accuser, and to find counsel and witnesses.",
-        "year": 1791
-    },
-    "7": {
-        "description": "Reserves individuals' rights to jury trial depending on the civil case, and cases already examined by not be reopened by another court.",
-        "year": 1791
-    },
-    "8": {
-        "description": "Forbids exorbitant bails and fines and punishment that is unusual or cruel.",
-        "year": 1791
-    },
-    "9": {
-        "description": "Reserves the rights of citizens which are not specifically mentioned by the U.S. Constitution.",
-        "year": 1791
-    },
-    "10": {
-        "description": "Reserves powers that are not given to the U.S. government under the Constitution, nor prohibited to a State of the U.S., to the people and the States.",
-        "year": 1791
-    },
-    "11": {
-        "description": "State sovereign immunity. States are protected from suits by citizens living in another state or foreigners that do not reside within the state borders.",
-        "year": 1795
-    },
-    "12": {
-        "description": "Modifies and clarifies the procedure for electing vice-presidents and presidents.",
-        "year": 1804
-    },
-    "13": {
-        "description": "Except as punishment for criminal offense, forbids forced-slavery and involuntary servitude.",
-        "year": 1865
-    },
-    "14": {
-        "description": "Details Equal Protection Clause, Due Process Clause, Citizenship Cause, and clauses dealing with the Confederacy and its officials.",
-        "year": 1868
-    },
-    "15": {
-        "description": "Reserves citizens the suffrage rights regardless of their race, color, or previous slave status.",
-        "year": 1870
-    },
-    "16": {
-        "description": "Reserves the U.S. government the right to tax income.",
-        "year": 1913
-    },
-    "17": {
-        "description": "Establishes popular voting as the process under which senators are elected.",
-        "year": 1913
-    },
-    "18": {
-        "description": "Denies the sale and consumption of alcohol.",
-        "year": 1919
-    },
-    "19": {
-        "description": "Reserves women's suffrage rights.",
-        "year": 1920
-    },
-    "20": {
-        "description": "Also known as the \"lame duck amendment,\" establishes date of term starts for Congress (January 3) & the President (January 20).",
-        "year": 1933
-    },
-    "21": {
-        "description": "Details the repeal of the Eighteenth Amendment. State laws over alcohol are to remain.",
-        "year": 1933
-    },
-    "22": {
-        "description": "Limit the terms that an individual can be elected as president (at most two terms). Individuals who have served over two years of someone else's term may not be elected more than once.",
-        "year": 1951
-    },
-    "23": {
-        "description": "Reserves the right of citizens residing in the Disctrict of Columbia to vote for their own Electors for presidential elections.",
-        "year": 1961
-    },
-    "24": {
-        "description": "Citizens cannot be denied the suffrage rights for not paying a poll tax or any other taxes.",
-        "year": 1964
-    },
-    "25": {
-        "description": "Establishes the procedures for a successor of a President.",
-        "year": 1967
-    },
-    "26": {
-        "description": "Reserves the right for citizens 18 and older to vote.",
-        "year": 1971
-    },
-    "27": {
-        "description": "Denies any laws that vary the salaries of Congress members until the beginning of the next terms of office for Representatives.",
-        "year": 1992
-    }
+    "1": "Guarantees the right to the freedoms of speech, press, and religion. Protects the right to petition the government.",
+    "2": "Guarantees the people's right to own and bear arms for their defense.",
+    "3": "Citizens cannot be forced to quarter soldiers during times of peace.",
+    "4": "Citizens cannot be forced to subject themselves to seizure and search without a search warrant and probable cause.",
+    "5": "Prohibits abuse of governmental authority in legal procedures. Establishes rules for indictment by eminent domain and grand jury. Guarantees the due process rights. Protects citizens from self-incrimination and double jeopardy.",
+    "6": "Guarantees fair and speedy jury trial and the rights to know the accusation, the accuser, and to find counsel and witnesses.",
+    "7": "Reserves individuals' rights to jury trial depending on the civil case, and cases already examined by not be reopened by another court.",
+    "8": "Forbids exorbitant bails and fines and punishment that is unusual or cruel.",
+    "9": "Reserves the rights of citizens which are not specifically mentioned by the U.S. Constitution.",
+    "10": "Reserves powers that are not given to the U.S. government under the Constitution, nor prohibited to a State of the U.S., to the people and the States.",
+    "11": "State sovereign immunity. States are protected from suits by citizens living in another state or foreigners that do not reside within the state borders.",
+    "12": "Modifies and clarifies the procedure for electing vice-presidents and presidents.",
+    "13": "Except as punishment for criminal offense, forbids forced-slavery and involuntary servitude.",
+    "14": "Details Equal Protection Clause, Due Process Clause, Citizenship Cause, and clauses dealing with the Confederacy and its officials.",
+    "15": "Reserves citizens the suffrage rights regardless of their race, color, or previous slave status.",
+    "16": "Reserves the U.S. government the right to tax income.",
+    "17": "Establishes popular voting as the process under which senators are elected.",
+    "18": "Denies the sale and consumption of alcohol.",
+    "19": "Reserves women's suffrage rights.",
+    "20": "Also known as the \"lame duck amendment,\" establishes date of term starts for Congress (January 3) & the President (January 20).",
+    "21": "Details the repeal of the Eighteenth Amendment. State laws over alcohol are to remain.",
+    "22": "Limit the terms that an individual can be elected as president (at most two terms). Individuals who have served over two years of someone else's term may not be elected more than once.",
+    "23": "Reserves the right of citizens residing in the Disctrict of Columbia to vote for their own Electors for presidential elections.",
+    "24": "Citizens cannot be denied the suffrage rights for not paying a poll tax or any other taxes.",
+    "25": "Establishes the procedures for a successor of a President.",
+    "26": "Reserves the right for citizens 18 and older to vote.",
+    "27": "Denies any laws that vary the salaries of Congress members until the beginning of the next terms of office for Representatives."
 };
 
 const DOCELEMENTS = {
@@ -135,7 +54,7 @@ let questionList = [];
 let answerList = [];
 for (let law in AMENDMENTS) {
     answerList.push(law);
-    questionList.push(AMENDMENTS[law]["description"]);
+    questionList.push(AMENDMENTS[law]);
 }
 let temporaryQuestionList = [...questionList];
 let temporaryAnswerList = [...answerList];
